@@ -36,9 +36,9 @@ public class Doctor  implements Employee {
 
     @Override
     public String toString() {
-        return "Doctor " +
-                "name='" + name + '\'' +
-                ", doctorSpeciality='" + doctorSpeciality + '\''
+        return "Doctor" +
+                "name =" + name + '\'' +
+                ", doctorSpeciality = " + doctorSpeciality + '\''
                 ;
     }
 

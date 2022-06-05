@@ -1,9 +1,10 @@
 package entities;
 
+import entities.builder.Patient;
 import entities.state.AppointmentState;
 import entities.state.NewAppointment;
 
-import java.util.Date;
+
 
 
 
@@ -11,15 +12,25 @@ public class Appointment {
 
     private AppointmentState state = new NewAppointment();
 
-    private Date date;
-    private int time;
+    private String date;
+    private String time;
     private String reason;
+    private Doctor doctor;
+    private Patient patient;
 
-    public void setDate(Date date) {
+    public void setDoctor(Doctor doctor) {
+        this.doctor = doctor;
+    }
+
+    public void setPatient(Patient patient) {
+        this.patient = patient;
+    }
+
+    public void setDate(String date) {
         this.date = date;
     }
 
-    public void setTime(int time) {
+    public void setTime(String time) {
         this.time = time;
     }
 
@@ -27,11 +38,11 @@ public class Appointment {
         this.reason = reason;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public int getTime() {
+    public String getTime() {
         return time;
     }
 
@@ -58,5 +69,14 @@ public class Appointment {
 
     public void printStatus() {
         state.printStatus();
+    }
+
+    @Override
+    public String toString() {
+        return "Your appointment is :" + "\n" +
+                " date = " + date + "\n" +
+                " time = " + time + '\'' + "\n" +
+                " reason = " + reason + '\'' + "\n" +
+                '}';
     }
 }
