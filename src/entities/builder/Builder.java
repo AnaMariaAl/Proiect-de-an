@@ -11,5 +11,4 @@ public interface Builder {
     void setAddress ( String address);
     void setHeight (int height);
     void setWeight(int weight);
-    void setAppointment( Appointment appointment);
 }

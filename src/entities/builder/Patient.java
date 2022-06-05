@@ -16,7 +16,7 @@ public class Patient extends User {
     private Appointment appointment;
 
 
-    public Patient(String name, int age, String patientGender, String diagnostic, int number, String address, int height, int weight, Appointment appointment) {
+    public Patient(String name, int age, String patientGender, String diagnostic, int number, String address, int height, int weight) {
         this.name = name;
         this.patientGender = patientGender;
         this.age = age;
@@ -25,7 +25,6 @@ public class Patient extends User {
         this.address = address;
         this.height = height;
         this.weight = weight;
-        this.appointment = appointment;
     }
     @Override
     public String getName() {
@@ -62,6 +61,10 @@ public class Patient extends User {
     }
     public Appointment getAppointment() {
         return appointment;
+    }
+
+    public void setAppointment(Appointment appointment) {
+        this.appointment = appointment;
     }
 
     public String toString() {

@@ -12,7 +12,7 @@ public class PatientBuilder implements Builder {
     private String address;
     private int height;
     private int weight;
-    private Appointment appointment;
+   // private Appointment appointment;
 
     @Override
     public void setName(String name) {
@@ -53,12 +53,12 @@ public class PatientBuilder implements Builder {
         this.weight = weight;
     }
 
-    @Override
-    public void setAppointment(Appointment appointment) {
-        this.appointment = appointment;
-    }
+//    @Override
+//    public void setAppointment(Appointment appointment) {
+//        this.appointment = appointment;
+//    }
 
     public Patient getResult() {
-        return new Patient( name,age,patientGender,diagnostic,number,address,height,weight,appointment);
+        return new Patient( name,age,patientGender,diagnostic,number,address,height,weight);
     }
 }
